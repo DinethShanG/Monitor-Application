@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="50ea7fd6-08a8-46ae-a7b0-9a7fc3d46664" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/components/Aboutus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/components/AlertHistoryTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/components/LatestAlertInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/6.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/monitor-application-frontend" />
+  </component>
+  <component name="ProjectId" id="1lreGpnPRetwEmGIGCPD2cK1r2f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/monitor-application-frontend" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50ea7fd6-08a8-46ae-a7b0-9a7fc3d46664" name="Default Changelist" comment="" />
+      <created>1608359544605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608359544605</updated>
+      <workItem from="1608359550117" duration="346000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
