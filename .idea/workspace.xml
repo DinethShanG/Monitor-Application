@@ -1,33 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50ea7fd6-08a8-46ae-a7b0-9a7fc3d46664" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/components/Aboutus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/components/AlertHistoryTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/components/LatestAlertInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor-application-frontend/src/member_images/6.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor-application-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/monitor-application-frontend/yarn.lock" afterDir="false" />
+    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Aboutus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AlertHistoryTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LatestAlertInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SensorReadingChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/member_images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/member_images/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/member_images/3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/member_images/4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/member_images/5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/member_images/6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/SensorService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Monitor-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monitor-application-frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/monitor-application-frontend" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1lreGpnPRetwEmGIGCPD2cK1r2f" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="main" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="DinethShanG" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Monitor-Application" />
+  </component>
+  <component name="ProjectId" id="1loLJCJxVJG3sVuShVKPskNUJs0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,23 +70,105 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/monitor-application-frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/member_images" />
+      <recent name="$PROJECT_DIR$/src/components/member_images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="50ea7fd6-08a8-46ae-a7b0-9a7fc3d46664" name="Default Changelist" comment="" />
-      <created>1608359544605</created>
+      <changelist id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="" />
+      <created>1608258422997</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608359544605</updated>
-      <workItem from="1608359550117" duration="346000" />
+      <updated>1608258422997</updated>
+      <workItem from="1608258425650" duration="9552000" />
+      <workItem from="1608276554739" duration="10882000" />
+      <workItem from="1608295959250" duration="24025000" />
+      <workItem from="1608347683061" duration="9820000" />
+      <workItem from="1608359446023" duration="488000" />
+      <workItem from="1608360403379" duration="753000" />
+      <workItem from="1608373450006" duration="868000" />
+      <workItem from="1608374944318" duration="606000" />
+      <workItem from="1608480319432" duration="470000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1608373672825</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608373672826</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1608373694394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608373694394</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/SensorReadingChart.js</url>
+          <line>78</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

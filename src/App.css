@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+}
+a :hover{
+    text-decoration: none;
+}
+@media all and (max-width:480px) {
+    .button-custom { display:inline-block; }
+}
