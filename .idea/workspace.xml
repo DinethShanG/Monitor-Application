@@ -1,43 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Aboutus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AlertHistoryTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LatestAlertInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SensorReadingChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/member_images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/member_images/2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/member_images/3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/member_images/4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/member_images/5.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/member_images/6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/SensorService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Monitor-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/monitor-application-frontend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="setIntervals for axios">
+      <change afterPath="$PROJECT_DIR$/src/components/DashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +91,9 @@
       <workItem from="1608373450006" duration="868000" />
       <workItem from="1608374944318" duration="606000" />
       <workItem from="1608480319432" duration="470000" />
+      <workItem from="1608520897066" duration="9616000" />
+      <workItem from="1608568723808" duration="2518000" />
+      <workItem from="1608572182080" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608373672825</created>
@@ -138,7 +109,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608373694394</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1608482830490</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608482830490</updated>
+    </task>
+    <task id="LOCAL-00004" summary="setIntervals for axios">
+      <created>1608569137598</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608569137598</updated>
+    </task>
+    <task id="LOCAL-00005" summary="setIntervals for axios">
+      <created>1608569252896</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608569252896</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +150,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="setIntervals for axios" />
+    <option name="LAST_COMMIT_MESSAGE" value="setIntervals for axios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

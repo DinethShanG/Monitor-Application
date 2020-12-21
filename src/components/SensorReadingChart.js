@@ -87,6 +87,9 @@ class SensorReadingChart extends Component {
                 ]
             },
             options: {
+                animation: {
+                    duration: 0
+                },
                 tooltips: {
                     callbacks: {
                         label: function(tooltipItem, data) {
@@ -140,21 +143,20 @@ class SensorReadingChart extends Component {
         )}
     }
 
+    axiosFunc(){
+
+    }
     componentDidMount() {
-        SensorService.getSensorReadings(apiEndPoint).then((response)=>{
-            const sensorReadings = response.data
-            this.setState({sensorReadings})
-            const myChartRef = this.chartRef.current.getContext("2d");
-            new Chart(myChartRef, options);
-        });
+        setInterval(function() {
+            SensorService.getSensorReadings(apiEndPoint).then((response)=>{
+                const sensorReadings = response.data
+                this.setState({sensorReadings})
+                const myChartRef = this.chartRef.current.getContext("2d");
+                new Chart(myChartRef, options);
+            });
+        }.bind(this), 1000);
     }
 
 }
 
 export default SensorReadingChart;
-
-
-/**
- * TODO
- * Change this component into reusable component
- **/
