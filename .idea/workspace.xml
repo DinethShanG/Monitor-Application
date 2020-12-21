@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="initial commit">
+    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="setIntervals for axios">
+      <change afterPath="$PROJECT_DIR$/src/components/DashBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AlertHistoryTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AlertHistoryTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LatestAlertInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LatestAlertInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SensorReadingChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SensorReadingChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/SensorService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/SensorService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,8 @@
       <workItem from="1608374944318" duration="606000" />
       <workItem from="1608480319432" duration="470000" />
       <workItem from="1608520897066" duration="9616000" />
-      <workItem from="1608568723808" duration="364000" />
+      <workItem from="1608568723808" duration="2518000" />
+      <workItem from="1608572182080" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608373672825</created>
@@ -118,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608482830490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="setIntervals for axios">
+      <created>1608569137598</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608569137598</updated>
+    </task>
+    <task id="LOCAL-00005" summary="setIntervals for axios">
+      <created>1608569252896</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608569252896</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +150,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="setIntervals for axios" />
+    <option name="LAST_COMMIT_MESSAGE" value="setIntervals for axios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
