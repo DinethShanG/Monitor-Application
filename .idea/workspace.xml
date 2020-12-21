@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="setIntervals for axios">
-      <change afterPath="$PROJECT_DIR$/src/components/DashBoard.js" afterDir="false" />
+    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="Change chart type from scatter to line Component">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SensorReadingChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SensorReadingChart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
       <workItem from="1608480319432" duration="470000" />
       <workItem from="1608520897066" duration="9616000" />
       <workItem from="1608568723808" duration="2518000" />
-      <workItem from="1608572182080" duration="316000" />
+      <workItem from="1608572182080" duration="4725000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608373672825</created>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608569252896</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DashBoard Component">
+      <created>1608572527650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608572527650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,14 +157,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="setIntervals for axios" />
-    <option name="LAST_COMMIT_MESSAGE" value="setIntervals for axios" />
+    <MESSAGE value="DashBoard Component" />
+    <MESSAGE value="Change chart type from scatter to line Component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change chart type from scatter to line Component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/SensorReadingChart.js</url>
-          <line>78</line>
+          <line>79</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

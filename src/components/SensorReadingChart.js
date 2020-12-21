@@ -56,28 +56,29 @@ class SensorReadingChart extends Component {
                 }
             });
         options = {
-            type: "scatter",
+            type: "line",
             data: {
+                xLabels: dataPoints.map(x=>{return x.x}),
                 datasets: [
                     {
-                        data: dataPoints, //Sample data set [{x:1, y:21},{x:2, y:25},{x:3, y:31},{x:4, y:11},]
+                        data: dataPoints.map(y=>{return y.y}), //Sample data set [{x:1, y:21},{x:2, y:25},{x:3, y:31},{x:4, y:11},]
                         showLine: true,
                         fill: false,
                         borderColor: themeColor[1],
                         label: yAxisLabel+" Graph",
                         pointBackgroundColor: function(context) {
                             let index = context.dataIndex;
-                            let value = context.dataset.data[index].y;
+                            let value = context.dataset.data[index];
                             return value > threshold ? themeColor[0] : 'transparent';
                         },
                         pointBorderColor: function(context) {
                             let index = context.dataIndex;
-                            let value = context.dataset.data[index].y;
+                            let value = context.dataset.data[index];
                             return value > threshold ? themeColor[0] : 'transparent';
                         }
                     },
                     {
-                        data: thresholdLine,
+                        data: thresholdLine.map(y=>{return y.y}),
                         showLine: true,
                         borderColor: themeColor[0],
                         fill: false,
@@ -127,13 +128,13 @@ class SensorReadingChart extends Component {
 
         if(this.state.sensorReadings.length === 0)
         {
-            return (<h5 className="card-subtitle mb-2 text-muted " align={"center"}><i className="bi bi-lightning"></i>No Readings Yet!</h5>)
+            return (<h5 className="card-subtitle mb-2 text-muted " align={"center"}><i className="bi bi-lightning"/>No Readings Yet!</h5>)
         }
         else{
         return (
 
             <div>
-                <div><big><i className={icon} style={{color: themeColor[0]}}></i>{chartTitle}</big></div>
+                <div><big><i className={icon} style={{color: themeColor[0]}}/>{chartTitle}</big></div>
                 <br/>
                 <canvas
                     id="myChart"
