@@ -160,9 +160,3 @@ class SensorReadingChart extends Component {
 }
 
 export default SensorReadingChart;
-
-
-/**
- * TODO
- * Change this component into reusable component
- **/
