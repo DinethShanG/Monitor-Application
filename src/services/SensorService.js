@@ -6,3 +6,8 @@ class SensorService{
     }
 }
 export default new SensorService();
+
+
+/**
+ ToDo : SetInterval to
+ **/

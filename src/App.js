@@ -72,15 +72,15 @@ class App extends Component {
                             </div>
                             <div className={"p-3 m-2"} align={"center"}>
                                 <LatestAlertInfo icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                                 x="id"                                        //Change chart x variable key name
-                                                 y="age"                                       //Change chart y variable key name
-                                                 location="name"                               //Change chart location key name
+                                                 x="id"                                      //Change chart x variable key name
+                                                 y="age"                                     //Change chart y variable key name
+                                                 location="name"                             //Change chart location key name
                                                  yAxisLabel="Temperature"                    //Change chart y axis label
                                                  yUnit="F"                                   //Change y variable unit
                                                  xAxisLabel="Date and Time"                  //Change chart x axis label
-                                                 threshold={30}                                //Change alert threshold
+                                                 threshold={30}                              //Change alert threshold
                                                  apiEndPoint='http://localhost:8080/students'//Change dataset endpoint url
-                                                 themeColor={["red"/*text color*/, "rgba(255,165,0,0.2)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}               //Change chart theme color x2
+                                                 themeColor={["red"/*text color*/, "rgba(255,165,0,0.2)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 />
                             </div>
                         </div>

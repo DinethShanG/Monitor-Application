@@ -59,10 +59,12 @@ class LatestAlertInfo extends Component{
     }
 
     componentDidMount() {
-        SensorService.getSensorReadings(apiEndPoint).then((response)=>{
-            const sensorReadings = response.data
-            this.setState({sensorReadings})
-        });
+        setInterval(function() {
+            SensorService.getSensorReadings(apiEndPoint).then((response)=>{
+                const sensorReadings = response.data
+                this.setState({sensorReadings})
+            });
+        }.bind(this), 1000);
 
 
     }
