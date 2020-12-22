@@ -13,8 +13,6 @@ let location = "";
 let tableTitle = "";
 let icon = "";
 let themeColor = [];
-let index=0;
-
 
 class AlertHistoryTable extends Component{
 

@@ -6,7 +6,7 @@ import "./App.css";
 import AuthService from "./services/auth.service";
 
 import Login from "./components/Login";
-import Register from "./components/Register"
+import Register from "./components/Register";
 import DashBoard from "./components/DashBoard";
 
 class App extends Component {

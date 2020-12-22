@@ -17,7 +17,7 @@ class DashBoard extends Component {
 
     ChangeGraph = (event) => {
         console.error(event.target.value)
-        if (event.target.value == 1){
+        if (event.target.value === 1){
             document.getElementById("temp-g").style.display = "block"
             document.getElementById("not-available-g").style.display = "none"
         }else{
@@ -27,7 +27,7 @@ class DashBoard extends Component {
     }
     ChangeTable = (event) => {
         console.error(event.target.value)
-        if (event.target.value == 1){
+        if (event.target.value === 1){
             document.getElementById("temp-t").style.display = "block"
             document.getElementById("not-available-t").style.display = "none"
         }else{
@@ -40,7 +40,7 @@ class DashBoard extends Component {
             <div className={'container-fluid bg-dark '}>
                 <div
                     className={'row align-items-center justify-content-left bg-light text-dark p-3 sticky-top shadow-sm'}>
-                    <img className={'img-fluid p-1'} src={logo} width={"50px"}/>
+                    <img className={'img-fluid p-1'} src={logo} width={"50px"} alt ="LogoImage"/>
                     <span className={'h2'}> <b>Monitor</b> </span>
                     <span className={'h3'}> <i>application.</i></span>
                 </div>
