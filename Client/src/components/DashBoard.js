@@ -12,12 +12,32 @@ import LatestAlertInfo from "./LatestAlertInfo";
 import AlertHistoryTable from "./AlertHistoryTable";
 import {Link} from 'react-scroll'
 import Aboutus from "./Aboutus";
+import AuthService from "../services/auth.service";
+import { Redirect } from "react-router-dom";
 
-class DashBoard extends Component {
+
+export default class DashBoard extends Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          redirect: null,
+          userReady: false,
+          currentUser: { username: "" }
+        };
+      }
+    
+    componentDidMount() {
+        const currentUser = AuthService.getCurrentUser();
+    
+        if (!currentUser) this.setState({ redirect: "/" });
+        this.setState({ currentUser: currentUser, userReady: true })
+    }
 
     ChangeGraph = (event) => {
         console.error(event.target.value)
-        if (event.target.value == 1){
+        if (event.target.value === 1){
             document.getElementById("temp-g").style.display = "block"
             document.getElementById("not-available-g").style.display = "none"
         }else{
@@ -27,7 +47,7 @@ class DashBoard extends Component {
     }
     ChangeTable = (event) => {
         console.error(event.target.value)
-        if (event.target.value == 1){
+        if (event.target.value === 1){
             document.getElementById("temp-t").style.display = "block"
             document.getElementById("not-available-t").style.display = "none"
         }else{
@@ -36,11 +56,16 @@ class DashBoard extends Component {
         }
     }
     render() {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+          }
+      
+        else{  
         return (
             <div className={'container-fluid bg-dark '}>
                 <div
                     className={'row align-items-center justify-content-left bg-light text-dark p-3 sticky-top shadow-sm'}>
-                    <img className={'img-fluid p-1'} src={logo} width={"50px"}/>
+                    <img className={'img-fluid p-1'} src={logo} width={"50px"} alt="LogoImage"/>
                     <span className={'h2'}> <b>Monitor</b> </span>
                     <span className={'h3'}> <i>application.</i></span>
                 </div>
@@ -73,13 +98,13 @@ class DashBoard extends Component {
                             <div className={"p-3 m-2"} align={"center"}>
                                 <LatestAlertInfo icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                                  x="id"                                      //Change chart x variable key name
-                                                 y="age"                                     //Change chart y variable key name
-                                                 location="name"                             //Change chart location key name
+                                                 y="dataValue"                                     //Change chart y variable key name
+                                                 location="sensorID"                             //Change chart location key name
                                                  yAxisLabel="Temperature"                    //Change chart y axis label
                                                  yUnit="F"                                   //Change y variable unit
                                                  xAxisLabel="Date and Time"                  //Change chart x axis label
                                                  threshold={30}                              //Change alert threshold
-                                                 apiEndPoint='http://localhost:8080/students'//Change dataset endpoint url
+                                                 apiEndPoint='http://localhost:8090/sensor/all'//Change dataset endpoint url
                                                  themeColor={["red"/*text color*/, "rgba(255,165,0,0.2)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 />
                             </div>
@@ -99,13 +124,13 @@ class DashBoard extends Component {
                                     icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                     chartTitle="Temperature Readings"           //Change chart title
                                     x="id"                                      //Change chart x variable key name
-                                    y="age"                                     //Change chart y variable key name
-                                    location="name"                             //Change chart location key name
+                                    y="dataValue"                                     //Change chart y variable key name
+                                    location="sensorID"                             //Change chart location key name
                                     yAxisLabel="Temperature"                    //Change chart y axis label
                                     yUnit="F"                                   //Change y variable unit
                                     xAxisLabel="Date and Time"                  //Change chart x axis label
                                     threshold={30}                              //Change alert threshold
-                                    apiEndPoint='http://localhost:8080/students'//Change dataset endpoint url
+                                    apiEndPoint='http://localhost:8090/sensor/all'//Change dataset endpoint url
                                     themeColor={["red", "orange"]}              //Change chart theme color x2
                                 />
                             </div>
@@ -127,13 +152,13 @@ class DashBoard extends Component {
                                 <AlertHistoryTable icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                                    tableTitle="Temperature Alert History"   //Change chart title
                                                    x="id"                                        //Change chart x variable key name
-                                                   y="age"                                       //Change chart y variable key name
-                                                   location="name"                               //Change chart location key name
+                                                   y="dataValue"                                       //Change chart y variable key name
+                                                   location="sensorID"                               //Change chart location key name
                                                    yAxisLabel="Temperature"                    //Change chart y axis label
                                                    yUnit="F"                                   //Change y variable unit
                                                    xAxisLabel="Date and Time"                  //Change chart x axis label
                                                    threshold={30}                                //Change alert threshold
-                                                   apiEndPoint='http://localhost:8080/students'//Change dataset endpoint url
+                                                   apiEndPoint='http://localhost:8090/sensor/all'//Change dataset endpoint url
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 />
                             </div>
@@ -163,7 +188,7 @@ class DashBoard extends Component {
             </div>
 
         );
+        }
     }
 }
 
-export default DashBoard;

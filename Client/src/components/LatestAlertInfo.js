@@ -12,8 +12,6 @@ let y = "";
 let location = "";
 let icon = "";
 let themeColor = [];
-let index=0;
-
 
 class LatestAlertInfo extends Component{
 
