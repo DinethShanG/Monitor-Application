@@ -9,6 +9,12 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import DashBoard from "./components/DashBoard";
 
+const NoMatchPage = () => {
+  return (
+    <h3>404 - Not found</h3>
+  );
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -81,6 +87,7 @@ class App extends Component {
             <Route exact={true} path={["/","/login"]} component={Login}/>
             <Route exact={true} path="/register" component={Register} />
             <Route exact={true} path={["/profile","/home"]} component={DashBoard} />
+            <Route component={NoMatchPage} />
           </Switch>
         </div>
       </div>
