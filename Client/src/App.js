@@ -27,8 +27,6 @@ class App extends Component {
     if (user) {
       this.setState({
         currentUser: user,
-        showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
-        showAdminBoard: user.roles.includes("ROLE_ADMIN"),
       });
     }
   }
@@ -46,6 +44,11 @@ class App extends Component {
 
           {currentUser ? (
             <div className="navbar-nav ml-auto">
+              <li className="nav-item">
+              <Link to={"/home"} className="nav-link">
+                Dashboard
+              </Link>
+            </li>
               <li className="nav-item">
                 <Link to={"/profile"} className="nav-link">
                   {currentUser.username}
@@ -73,11 +76,11 @@ class App extends Component {
             </div>
           )}
         </nav> 
-        <div className="container mt-3">
+        <div className="container-fluid">
           <Switch>
-            <Route exact={true} path={["/", "/home","/login"]} component={Login}/>
+            <Route exact={true} path={["/","/login"]} component={Login}/>
             <Route exact={true} path="/register" component={Register} />
-            <Route exact={true} path="/profile" component={DashBoard} />
+            <Route exact={true} path={["/profile","/home"]} component={DashBoard} />
           </Switch>
         </div>
       </div>
