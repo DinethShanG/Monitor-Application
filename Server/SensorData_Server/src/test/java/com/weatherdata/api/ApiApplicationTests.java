@@ -1,10 +1,10 @@
-package com.teamd.wetherapp;
+package com.weatherdata.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WetherappApplicationTests {
+class ApiApplicationTests {
 
     @Test
     void contextLoads() {
