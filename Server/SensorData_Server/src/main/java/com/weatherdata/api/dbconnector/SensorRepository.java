@@ -10,5 +10,5 @@ import java.util.List;
 public interface SensorRepository extends MongoRepository<Sensor,String> {
 
      List<Sensor> findByTimestampAndExceeded(String timestamp,boolean exceeded);
-    
+     List<Sensor> findBySensorId(String sensorId);
 }
