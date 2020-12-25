@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import { isEmail } from "validator";
+import { isEmail} from "validator";
 
 import AuthService from "../services/auth.service";
 
@@ -21,6 +21,17 @@ const email = value => {
     return (
       <div className="alert alert-danger" role="alert">
         This is not a valid email.
+      </div>
+    );
+  }
+};
+
+const mobile = value => {
+  const regex = /^(?:0|94|\+94)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|912)(0|2|3|4|5|7|9)|7(0|1|2|5|6|7|8)\d)\d{6}$/;  
+  if (!regex.exec(value)) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        This is not a valid mobile.
       </div>
     );
   }
@@ -52,11 +63,15 @@ export default class Register extends Component {
     this.handleRegister = this.handleRegister.bind(this);
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.onChangeMobile = this.onChangeMobile.bind(this);
+    this.onChangeMethod = this.onChangeMethod.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
 
     this.state = {
       username: "",
       email: "",
+      mobile:"",
+      method:"",
       password: "",
       successful: false,
       message: ""
@@ -72,6 +87,17 @@ export default class Register extends Component {
   onChangeEmail(e) {
     this.setState({
       email: e.target.value
+    });
+  }
+
+  onChangeMobile(e) {
+    this.setState({
+      mobile: e.target.value
+    });
+  }
+  onChangeMethod(e) {
+    this.setState({
+      method: e.target.value
     });
   }
 
@@ -95,6 +121,8 @@ export default class Register extends Component {
       AuthService.register(
         this.state.username,
         this.state.email,
+        this.state.mobile,
+        this.state.method,
         this.state.password
       ).then(
         response => {
@@ -160,6 +188,33 @@ export default class Register extends Component {
                     onChange={this.onChangeEmail}
                     validations={[required, email]}
                   />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="mobile">Mobile</label>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    name="mobile"
+                    value={this.state.mobile}
+                    onChange={this.onChangeMobile}
+                    validations={[required, mobile]}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="method">Method</label>
+                  <select
+                    type="text"
+                    className="form-control"
+                    name="mobile"
+                    value={this.state.method}
+                    onChange={this.onChangeMethod}
+
+                  >
+                    <option value="email">Email</option>
+                    <option value="sms">SMS</option>
+                    <option value="voice">Voice</option>
+                  </select>
                 </div>
 
                 <div className="form-group">

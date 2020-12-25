@@ -13,7 +13,13 @@ public class SignupRequest {
     @Size(max = 50)
     @Email
     private String email;
-    
+
+    @NotBlank
+    @Size(max = 15)
+    private String mobile;
+    @NotBlank
+    private String method;
+
     private Set<String> roles;
     
     @NotBlank
@@ -35,7 +41,23 @@ public class SignupRequest {
     public void setEmail(String email) {
         this.email = email;
     }
- 
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
     public String getPassword() {
         return password;
     }

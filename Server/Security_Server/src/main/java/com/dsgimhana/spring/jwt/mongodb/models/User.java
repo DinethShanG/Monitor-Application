@@ -24,6 +24,8 @@ public class User {
   @Size(max = 50)
   @Email
   private String email;
+  private String mobile;
+  private String method;
 
   @NotBlank
   @Size(max = 120)
@@ -35,9 +37,11 @@ public class User {
   public User() {
   }
 
-  public User(String username, String email, String password) {
+  public User(String username, String email,String mobile,String method, String password) {
     this.username = username;
     this.email = email;
+    this.mobile = mobile;
+    this.method = method;
     this.password = password;
   }
 
@@ -63,6 +67,22 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getMobile() {
+    return mobile;
+  }
+
+  public void setMobile(String mobile) {
+    this.mobile = mobile;
+  }
+
+  public String getMethod() {
+    return method;
+  }
+
+  public void setMethod(String method) {
+    this.method = method;
   }
 
   public String getPassword() {
