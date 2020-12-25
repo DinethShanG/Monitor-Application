@@ -16,11 +16,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.dsgimhana.spring.jwt.mongodb.models.ERole;
 import com.dsgimhana.spring.jwt.mongodb.models.Role;
@@ -36,6 +32,7 @@ import com.dsgimhana.spring.jwt.mongodb.security.services.UserDetailsImpl;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+	private List <User> allUsers;
 	@Autowired
 	AuthenticationManager authenticationManager;
 
@@ -129,5 +126,10 @@ public class AuthController {
 		userRepository.save(user);
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+	}
+	@GetMapping("/users")
+	public List<User> getAllUsers(){
+		allUsers = this.userRepository.findAll();
+		return allUsers;
 	}
 }
