@@ -206,7 +206,7 @@ export default class Register extends Component {
                   <select
                     type="text"
                     className="form-control"
-                    name="mobile"
+                    name="method"
                     value={this.state.method}
                     onChange={this.onChangeMethod}
 
