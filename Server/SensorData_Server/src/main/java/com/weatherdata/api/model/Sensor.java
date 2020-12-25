@@ -27,7 +27,7 @@ public class Sensor {
         return id;
     }
 
-    public String getSensor_id() {
+    public String getSensorId() {
         return sensorId;
     }
 
