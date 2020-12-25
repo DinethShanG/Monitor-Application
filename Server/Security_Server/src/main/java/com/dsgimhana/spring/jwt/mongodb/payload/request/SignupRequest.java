@@ -14,10 +14,7 @@ public class SignupRequest {
     @Email
     private String email;
 
-    @NotBlank
-    @Size(max = 15)
     private String mobile;
-    @NotBlank
     private String method;
 
     private Set<String> roles;
