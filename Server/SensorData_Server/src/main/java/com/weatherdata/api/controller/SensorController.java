@@ -33,10 +33,10 @@ public class SensorController {
         boolean isExceeded=true;
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime dateTime = LocalDateTime.now();
-        date=dtf.format(dateTime);
+        LocalDateTime today = LocalDateTime.now();
+        date=dtf.format(today);
 
-        List<Sensor> readings =this.sensorRepository.findByTimestampAndExceeded(date,isExceeded);
+        List<Sensor> readings =this.sensorRepository.findByDateAndExceeded(date,isExceeded);
         return readings;
     }
 
@@ -51,14 +51,13 @@ public class SensorController {
 
 
     @PostMapping("/setValue")
-    public String insert( String sensorId,String timestamp,String dataValue){
+    public String insert( String sensorId,String date,String time,String dataValue){
 
         if(sensorId.equals("1") || sensorId.equals("2") || sensorId.equals("3")){
             alertType = new AlertTriggerFactory().getAlertType(sensorId);
             Sensor sensor = null;
             try {
-                sensor = new Sensor(sensorId,timestamp,dataValue,alertType.getThreshold()
-                        ,alertType.isExceeded(Double.parseDouble(dataValue)));
+                sensor = new Sensor(sensorId,date,time,dataValue,alertType.getThreshold(),alertType.isExceeded(Double.parseDouble(dataValue)));
             } catch (IOException | URISyntaxException e) {
                 e.printStackTrace();
             }

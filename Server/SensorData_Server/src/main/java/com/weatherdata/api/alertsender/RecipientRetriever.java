@@ -13,7 +13,7 @@ import java.util.List;
 public class RecipientRetriever {
 
     private List<User> allUsers;
-    private final String URI = "http://localhost:8080/api/auth/users";
+    private final String URI = "http://localhost:8070/api/auth/users";
 
     public List<User> getAllUsers(){
         RestTemplate restTemplate = new RestTemplate();

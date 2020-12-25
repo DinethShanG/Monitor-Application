@@ -10,29 +10,31 @@ public class Sensor {
 
     @Id private String id;
     private String sensorId;
-    private String timestamp;
+    private String date;
+    private String time;
     private String value;
     private double thresholdValue;
-    private boolean exceeded;//remove
+    private boolean exceeded;
 
-    public Sensor(String sensorId, String timestamp, String value, double thresholdValue, boolean exceeded) {
+    public Sensor(String sensorId, String date, String time, String value, double thresholdValue, boolean exceeded) {
         this.sensorId = sensorId;
-        this.timestamp = timestamp;
+        this.date = date;
+        this.time = time;
         this.value = value;
         this.thresholdValue = thresholdValue;
         this.exceeded = exceeded;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getSensorId() {
         return sensorId;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
     }
 
     public String getValue() {
@@ -46,5 +48,4 @@ public class Sensor {
     public boolean isExceeded() {
         return exceeded;
     }
-
 }
