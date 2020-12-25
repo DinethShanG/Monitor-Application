@@ -97,14 +97,14 @@ export default class DashBoard extends Component {
                             </div>
                             <div className={"p-3 m-2"} align={"center"}>
                                 <LatestAlertInfo icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                                 x="id"                                      //Change chart x variable key name
-                                                 y="dataValue"                                     //Change chart y variable key name
-                                                 location="sensorID"                             //Change chart location key name
+                                                 x="date"                                      //Change chart x variable key name
+                                                 y="value"                                     //Change chart y variable key name
+                                                 location="sensorId"                             //Change chart location key name
                                                  yAxisLabel="Temperature"                    //Change chart y axis label
                                                  yUnit="F"                                   //Change y variable unit
-                                                 xAxisLabel="Date and Time"                  //Change chart x axis label
+                                                 xAxisLabel="Date"                  //Change chart x axis label
                                                  threshold={30}                              //Change alert threshold
-                                                 apiEndPoint='http://localhost:8090/sensor/all'//Change dataset endpoint url
+                                                 apiEndPoint='http://localhost:8095/sensor/getAlert'//Change dataset endpoint url
                                                  themeColor={["red"/*text color*/, "rgba(255,165,0,0.2)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 />
                             </div>
@@ -123,14 +123,14 @@ export default class DashBoard extends Component {
                                 <SensorReadingChart
                                     icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                     chartTitle="Temperature Readings"           //Change chart title
-                                    x="id"                                      //Change chart x variable key name
-                                    y="dataValue"                                     //Change chart y variable key name
-                                    location="sensorID"                             //Change chart location key name
+                                    x="date"                                      //Change chart x variable key name
+                                    y="value"                                     //Change chart y variable key name
+                                    location="sensorId"                             //Change chart location key name
                                     yAxisLabel="Temperature"                    //Change chart y axis label
                                     yUnit="F"                                   //Change y variable unit
-                                    xAxisLabel="Date and Time"                  //Change chart x axis label
+                                    xAxisLabel="Date"                  //Change chart x axis label
                                     threshold={30}                              //Change alert threshold
-                                    apiEndPoint='http://localhost:8090/sensor/all'//Change dataset endpoint url
+                                    apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
                                     themeColor={["red", "orange"]}              //Change chart theme color x2
                                 />
                             </div>
@@ -151,14 +151,14 @@ export default class DashBoard extends Component {
                             <div className={"p-3 m-2"} id={"temp-t"}>
                                 <AlertHistoryTable icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                                    tableTitle="Temperature Alert History"   //Change chart title
-                                                   x="id"                                        //Change chart x variable key name
-                                                   y="dataValue"                                       //Change chart y variable key name
-                                                   location="sensorID"                               //Change chart location key name
+                                                   x="date"                                        //Change chart x variable key name
+                                                   y="value"                                       //Change chart y variable key name
+                                                   location="sensorId"                               //Change chart location key name
                                                    yAxisLabel="Temperature"                    //Change chart y axis label
                                                    yUnit="F"                                   //Change y variable unit
-                                                   xAxisLabel="Date and Time"                  //Change chart x axis label
+                                                   xAxisLabel="Date"                  //Change chart x axis label
                                                    threshold={30}                                //Change alert threshold
-                                                   apiEndPoint='http://localhost:8090/sensor/all'//Change dataset endpoint url
+                                                   apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 />
                             </div>
