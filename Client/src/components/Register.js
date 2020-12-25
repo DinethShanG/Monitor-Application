@@ -71,7 +71,7 @@ export default class Register extends Component {
       username: "",
       email: "",
       mobile:"",
-      method:"",
+      method:"email",
       password: "",
       successful: false,
       message: ""

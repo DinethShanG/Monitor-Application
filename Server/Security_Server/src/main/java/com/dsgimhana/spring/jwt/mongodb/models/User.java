@@ -24,7 +24,9 @@ public class User {
   @Size(max = 50)
   @Email
   private String email;
+
   private String mobile;
+
   private String method;
 
   @NotBlank
