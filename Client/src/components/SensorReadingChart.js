@@ -162,19 +162,14 @@ class SensorReadingChart extends Component {
         }
     }
     componentDidMount() {
-        this._isMounted = true;
-        if (this._isMounted) {
-            SensorService.getSensorReadings(apiEndPoint).then((response) => {
-                const sensorReadings = response.data;
-                this.setState({ sensorReadings });
+        setInterval(function() {
+            SensorService.getSensorReadings(apiEndPoint).then((response)=>{
+                const sensorReadings = response.data
+                this.setState({sensorReadings})
                 const myChartRef = this.chartRef.current.getContext("2d");
                 new Chart(myChartRef, options);
             });
-        }
-    }
-
-    componentWillUnmount() {
-        this._isMounted = false;
+        }.bind(this), 1000);
     }
 }
 
