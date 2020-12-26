@@ -7,6 +7,7 @@ import com.weatherdata.api.filter.AlertTriggerFactory;
 import com.weatherdata.api.filter.Alert;
 import com.weatherdata.api.filter.AlertType;
 import com.weatherdata.api.model.Sensor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/sensor")
 public class SensorController {

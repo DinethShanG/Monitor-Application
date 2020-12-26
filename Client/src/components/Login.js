@@ -81,8 +81,8 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
+      <div className="col-md-12 mt-3" align={"center"}>
+        <div className="card card-container d-inline-block bg-light border-light" align={"left"}>
           <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"

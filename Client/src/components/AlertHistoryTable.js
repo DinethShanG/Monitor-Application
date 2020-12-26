@@ -10,6 +10,7 @@ let yUnit = "";
 let x = "";
 let y = "";
 let location = "";
+let time= "";
 let tableTitle = "";
 let icon = "";
 let themeColor = [];
@@ -25,6 +26,7 @@ class AlertHistoryTable extends Component{
         x = props.x
         y = props.y
         location = props.location
+        time = props.time
         icon = props.icon
         apiEndPoint = props.apiEndPoint
         yUnit = props.yUnit
@@ -51,6 +53,7 @@ class AlertHistoryTable extends Component{
                     <tr style={{backgroundColor: themeColor[1]}}>
                         <th scope="col"><small>#</small></th>
                         <th scope="col"><small>{xAxisLabel}</small></th>
+                        <th scope="col"><small>Time</small></th>
                         <th scope="col"><small>{yAxisLabel+" in "+yUnit}</small></th>
                         <th scope="col"><small>Location</small></th>
                     </tr>
@@ -61,6 +64,7 @@ class AlertHistoryTable extends Component{
                             <tr>
                                 <th scope="row"><small>{this.state.sensorReadings.indexOf(data)}</small></th>
                                 <td><small>{data[x]}</small></td>
+                                <td><small>{data[time]}</small></td>
                                 <td><small>{data[y]}</small></td>
                                 <td><small>{data[location]}</small></td>
                             </tr>

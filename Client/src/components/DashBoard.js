@@ -126,6 +126,7 @@ export default class DashBoard extends Component {
                                     x="date"                                      //Change chart x variable key name
                                     y="value"                                     //Change chart y variable key name
                                     location="sensorId"                             //Change chart location key name
+                                    time="time"                             //Change chart location key name
                                     yAxisLabel="Temperature"                    //Change chart y axis label
                                     yUnit="F"                                   //Change y variable unit
                                     xAxisLabel="Date"                  //Change chart x axis label
@@ -154,6 +155,7 @@ export default class DashBoard extends Component {
                                                    x="date"                                        //Change chart x variable key name
                                                    y="value"                                       //Change chart y variable key name
                                                    location="sensorId"                               //Change chart location key name
+                                                   time="time"                             //Change chart location key name
                                                    yAxisLabel="Temperature"                    //Change chart y axis label
                                                    yUnit="F"                                   //Change y variable unit
                                                    xAxisLabel="Date"                  //Change chart x axis label

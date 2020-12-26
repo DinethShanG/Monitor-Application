@@ -13,6 +13,7 @@ let yUnit = "";
 let x = "";
 let y = "";
 let location = "";
+let time = "";
 let chartTitle = "";
 let icon = "";
 let themeColor = [];
@@ -29,6 +30,7 @@ class SensorReadingChart extends Component {
         x = props.x;
         y = props.y;
         location = props.location;
+        time = props.time
         icon = props.icon;
         apiEndPoint = props.apiEndPoint;
         yUnit = props.yUnit;
@@ -45,6 +47,7 @@ class SensorReadingChart extends Component {
                 x: sensor[x], //change this to proper key
                 y: sensor[y], //change this to proper key
                 location: sensor[location], //change this to proper key
+                time: sensor[time],
             };
         });
         thresholdLine = this.state.sensorReadings.map((sensor) => {
@@ -102,17 +105,15 @@ class SensorReadingChart extends Component {
                                 yAxisLabel +
                                 " : " +
                                 tooltipItem.yLabel +
-                                " F  |  " +
+                                yUnit+"  |  " +
                                 xAxisLabel +
                                 " : " +
                                 tooltipItem.xLabel;
 
                             if (tooltipItem.yLabel > threshold) {
-                                label +=
+                                label +=" Time : "+dataPoints[tooltipItem.index].time +
                                     "  |  Location : " +
-                                    data.datasets[tooltipItem.datasetIndex].data[
-                                        tooltipItem.index
-                                    ].location; //change this to proper key
+                                    dataPoints[tooltipItem.index].location; //change this to proper key
                             }
                             return label;
                         },

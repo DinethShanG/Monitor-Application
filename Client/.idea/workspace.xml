@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="Change chart type from scatter to line Component">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SensorReadingChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SensorReadingChart.js" afterDir="false" />
-    </list>
+    <list default="true" id="e84652a5-9370-4867-9cbd-361e1680775f" name="Default Changelist" comment="Change chart type from scatter to line Component" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +15,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GithubProjectSettings">
     <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="main" />
@@ -93,6 +89,8 @@
       <workItem from="1608520897066" duration="9616000" />
       <workItem from="1608568723808" duration="2518000" />
       <workItem from="1608572182080" duration="4725000" />
+      <workItem from="1608981008850" duration="2695000" />
+      <workItem from="1608989173237" duration="6987000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608373672825</created>
@@ -166,7 +164,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/SensorReadingChart.js</url>
-          <line>79</line>
+          <line>82</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
