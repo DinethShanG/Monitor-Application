@@ -52,13 +52,13 @@ public class SensorController {
 
 
     @PostMapping("/setValue")
-    public String insert( String sensorId,String date,String time,String dataValue){
+    public String insert( String sensortype,String date,String time,String location,String dataValue){
 
-        if(sensorId.equals("1") || sensorId.equals("2") || sensorId.equals("3")){
-            alertType = new AlertTriggerFactory().getAlertType(sensorId);
+        if(sensortype.equals("1") || sensortype.equals("2") || sensortype.equals("3")){
+            alertType = new AlertTriggerFactory().getAlertType(sensortype);
             Sensor sensor = null;
             try {
-                sensor = new Sensor(sensorId,date,time,dataValue,alertType.getThreshold(),alertType.isExceeded(Double.parseDouble(dataValue)));
+                sensor = new Sensor(sensortype,date,time,location,dataValue,alertType.getThreshold(),alertType.isExceeded(Double.parseDouble(dataValue)));
             } catch (IOException | URISyntaxException e) {
                 e.printStackTrace();
             }
