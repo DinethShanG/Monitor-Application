@@ -167,8 +167,10 @@ class SensorReadingChart extends Component {
             SensorService.getSensorReadings(apiEndPoint).then((response)=>{
                 const sensorReadings = response.data
                 this.setState({sensorReadings})
-                const myChartRef = this.chartRef.current.getContext("2d");
-                new Chart(myChartRef, options);
+                if(this.chartRef.current) {
+                    const myChartRef = this.chartRef.current.getContext("2d");
+                    new Chart(myChartRef, options);
+                }
             });
         }.bind(this), 1000);
     }

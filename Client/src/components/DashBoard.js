@@ -22,6 +22,12 @@ export default class DashBoard extends Component {
         super(props);
     
         this.state = {
+          show_temp_graph: true,
+          show_pres_graph: false,
+          show_hum_graph: false,
+            show_temp_table: true,
+            show_pres_table: false,
+            show_hum_table: false,
           redirect: null,
           userReady: false,
           currentUser: { username: "" }
@@ -38,31 +44,25 @@ export default class DashBoard extends Component {
     ChangeGraph = (event) => {
         console.error(event.target.value)
         if (event.target.value === "1"){
-            document.getElementById("temp-g").style.display = "inline"
-            document.getElementById("not-available-g").style.display = "none"
+            this.setState({show_temp_graph: true, show_pres_graph: false, show_hum_graph: false})
         }
         if (event.target.value === "2"){
-            document.getElementById("temp-g").style.display = "none"
-            document.getElementById("not-available-g").style.display = "inline"
+            this.setState({show_temp_graph: false, show_pres_graph: true, show_hum_graph: false})
         }
         if (event.target.value === "3"){
-            document.getElementById("temp-g").style.display = "none"
-            document.getElementById("not-available-g").style.display = "inline"
+            this.setState({show_temp_graph: false, show_pres_graph: false, show_hum_graph: true})
         }
     }
     ChangeTable = (event) => {
         console.error(event.target.value)
-        if (event.target.value === "1"){
-            document.getElementById("temp-t").style.display = "inline"
-            document.getElementById("not-available-t").style.display = "none"
+        if (event.target.value === "1") {
+            this.setState({show_temp_table: true, show_pres_table: false, show_hum_table: false})
         }
-        if (event.target.value === "2"){
-            document.getElementById("temp-t").style.display = "none"
-            document.getElementById("not-available-t").style.display = "inline"
+        if (event.target.value === "2") {
+            this.setState({show_temp_table: false, show_pres_table: true, show_hum_table: false})
         }
-        if (event.target.value === "3"){
-            document.getElementById("temp-t").style.display = "none"
-            document.getElementById("not-available-t").style.display = "inline"
+        if (event.target.value === "3") {
+            this.setState({show_temp_table: false, show_pres_table: false, show_hum_table: true})
         }
     }
     render() {
@@ -70,7 +70,7 @@ export default class DashBoard extends Component {
             return <Redirect to={this.state.redirect} />
           }
       
-        else{  
+        else{
         return (
             <div className={'container-fluid bg-dark '}>
                 <div
@@ -129,7 +129,8 @@ export default class DashBoard extends Component {
                                     <option value="3">Humidity</option>
                                 </select>
                             </div>
-                            <div className={"p-3 m-2"} id={"temp-g"}>
+                            <div className={"p-3 m-2"}>
+                                { this.state.show_temp_graph ?
                                 <SensorReadingChart
                                     icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                     chartTitle="Temperature Readings"           //Change chart title
@@ -143,10 +144,23 @@ export default class DashBoard extends Component {
                                     threshold={30}                              //Change alert threshold
                                     apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
                                     themeColor={["red", "orange"]}              //Change chart theme color x2
-                                />
-                            </div>
-                            <div className={"p-3 m-2"} id={"not-available-g"} style={{display:"none"}}>
-                                <h5 className="card-subtitle mb-2 text-muted"><i className="bi bi-lightning"></i>This Chart is currently unavailable!</h5>
+                                /> : null}
+
+                                { this.state.show_pres_graph ?
+                                    <SensorReadingChart
+                                        icon="bi bi-thermometer-half"               //Change chart bootstrap icon
+                                        chartTitle="Temperature Readings"           //Change chart title
+                                        x="date"                                    //Change chart x variable key name
+                                        y="value"                                   //Change chart y variable key name
+                                        location="sensorId"                         //Change chart location key name
+                                        time="time"                                 //Change chart location key name
+                                        yAxisLabel="Temperature"                    //Change chart y axis label
+                                        yUnit="F"                                   //Change y variable unit
+                                        xAxisLabel="Date"                           //Change chart x axis label
+                                        threshold={30}                              //Change alert threshold
+                                        apiEndPoint='http://localhost:8095/sensor/getById?sensorId=2'//Change dataset endpoint url
+                                        themeColor={["blue", "green"]}              //Change chart theme color x2
+                                    /> : null}
                             </div>
                         </div>
                         <br/>
@@ -159,7 +173,8 @@ export default class DashBoard extends Component {
                                     <option value="3">Humidity</option>
                                 </select>
                             </div>
-                            <div className={"p-3 m-2"} id={"temp-t"}>
+                            <div className={"p-3 m-2"}>
+                                { this.state.show_temp_table ?
                                 <AlertHistoryTable icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                                    tableTitle="Temperature Alert History"      //Change chart title
                                                    x="date"                                    //Change chart x variable key name
@@ -172,10 +187,7 @@ export default class DashBoard extends Component {
                                                    threshold={30}                              //Change alert threshold
                                                    apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
-                                />
-                            </div>
-                            <div className={"p-3 m-2"} id={"not-available-t"} style={{display:"none"}}>
-                                <h5 className="card-subtitle mb-2 text-muted"><i className="bi bi-lightning"></i>This Table is currently unavailable!</h5>
+                                /> : null}
                             </div>
                         </div>
                         <br/>
