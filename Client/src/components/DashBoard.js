@@ -37,22 +37,32 @@ export default class DashBoard extends Component {
 
     ChangeGraph = (event) => {
         console.error(event.target.value)
-        if (event.target.value === 1){
-            document.getElementById("temp-g").style.display = "block"
+        if (event.target.value === "1"){
+            document.getElementById("temp-g").style.display = "inline"
             document.getElementById("not-available-g").style.display = "none"
-        }else{
+        }
+        if (event.target.value === "2"){
             document.getElementById("temp-g").style.display = "none"
-            document.getElementById("not-available-g").style.display = "block"
+            document.getElementById("not-available-g").style.display = "inline"
+        }
+        if (event.target.value === "3"){
+            document.getElementById("temp-g").style.display = "none"
+            document.getElementById("not-available-g").style.display = "inline"
         }
     }
     ChangeTable = (event) => {
         console.error(event.target.value)
-        if (event.target.value === 1){
-            document.getElementById("temp-t").style.display = "block"
+        if (event.target.value === "1"){
+            document.getElementById("temp-t").style.display = "inline"
             document.getElementById("not-available-t").style.display = "none"
-        }else{
+        }
+        if (event.target.value === "2"){
             document.getElementById("temp-t").style.display = "none"
-            document.getElementById("not-available-t").style.display = "block"
+            document.getElementById("not-available-t").style.display = "inline"
+        }
+        if (event.target.value === "3"){
+            document.getElementById("temp-t").style.display = "none"
+            document.getElementById("not-available-t").style.display = "inline"
         }
     }
     render() {
@@ -97,12 +107,12 @@ export default class DashBoard extends Component {
                             </div>
                             <div className={"p-3 m-2"} align={"center"}>
                                 <LatestAlertInfo icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                                 x="date"                                      //Change chart x variable key name
-                                                 y="value"                                     //Change chart y variable key name
-                                                 location="sensorId"                             //Change chart location key name
+                                                 x="date"                                    //Change chart x variable key name
+                                                 y="value"                                   //Change chart y variable key name
+                                                 location="sensorId"                         //Change chart location key name
                                                  yAxisLabel="Temperature"                    //Change chart y axis label
                                                  yUnit="F"                                   //Change y variable unit
-                                                 xAxisLabel="Date"                  //Change chart x axis label
+                                                 xAxisLabel="Date"                           //Change chart x axis label
                                                  threshold={30}                              //Change alert threshold
                                                  apiEndPoint='http://localhost:8095/sensor/getAlert'//Change dataset endpoint url
                                                  themeColor={["red"/*text color*/, "rgba(255,165,0,0.2)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
@@ -123,13 +133,13 @@ export default class DashBoard extends Component {
                                 <SensorReadingChart
                                     icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                     chartTitle="Temperature Readings"           //Change chart title
-                                    x="date"                                      //Change chart x variable key name
-                                    y="value"                                     //Change chart y variable key name
-                                    location="sensorId"                             //Change chart location key name
-                                    time="time"                             //Change chart location key name
+                                    x="date"                                    //Change chart x variable key name
+                                    y="value"                                   //Change chart y variable key name
+                                    location="sensorId"                         //Change chart location key name
+                                    time="time"                                 //Change chart location key name
                                     yAxisLabel="Temperature"                    //Change chart y axis label
                                     yUnit="F"                                   //Change y variable unit
-                                    xAxisLabel="Date"                  //Change chart x axis label
+                                    xAxisLabel="Date"                           //Change chart x axis label
                                     threshold={30}                              //Change alert threshold
                                     apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
                                     themeColor={["red", "orange"]}              //Change chart theme color x2
@@ -151,15 +161,15 @@ export default class DashBoard extends Component {
                             </div>
                             <div className={"p-3 m-2"} id={"temp-t"}>
                                 <AlertHistoryTable icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                                   tableTitle="Temperature Alert History"   //Change chart title
-                                                   x="date"                                        //Change chart x variable key name
-                                                   y="value"                                       //Change chart y variable key name
-                                                   location="sensorId"                               //Change chart location key name
-                                                   time="time"                             //Change chart location key name
+                                                   tableTitle="Temperature Alert History"      //Change chart title
+                                                   x="date"                                    //Change chart x variable key name
+                                                   y="value"                                   //Change chart y variable key name
+                                                   location="sensorId"                         //Change chart location key name
+                                                   time="time"                                 //Change chart location key name
                                                    yAxisLabel="Temperature"                    //Change chart y axis label
                                                    yUnit="F"                                   //Change y variable unit
-                                                   xAxisLabel="Date"                  //Change chart x axis label
-                                                   threshold={30}                                //Change alert threshold
+                                                   xAxisLabel="Date"                           //Change chart x axis label
+                                                   threshold={30}                              //Change alert threshold
                                                    apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 />
