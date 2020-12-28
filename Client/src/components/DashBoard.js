@@ -25,9 +25,9 @@ export default class DashBoard extends Component {
           show_temp_graph: true,
           show_pres_graph: false,
           show_hum_graph: false,
-            show_temp_table: true,
-            show_pres_table: false,
-            show_hum_table: false,
+          show_temp_table: true,
+          show_pres_table: false,
+          show_hum_table: false,
           redirect: null,
           userReady: false,
           currentUser: { username: "" }
@@ -65,6 +65,7 @@ export default class DashBoard extends Component {
             this.setState({show_temp_table: false, show_pres_table: false, show_hum_table: true})
         }
     }
+
     render() {
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect} />
@@ -106,20 +107,21 @@ export default class DashBoard extends Component {
                                 Today Alerts
                             </div>
                             <div className={"p-3 m-2"} align={"center"}>
-                                <LatestAlertInfo icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                                 x="date"                                    //Change chart x variable key name
-                                                 y="value"                                   //Change chart y variable key name
-                                                 location="sensorId"                         //Change chart location key name
-                                                 yAxisLabel="Temperature"                    //Change chart y axis label
-                                                 yUnit="F"                                   //Change y variable unit
-                                                 xAxisLabel="Date"                           //Change chart x axis label
-                                                 threshold={30}                              //Change alert threshold
-                                                 apiEndPoint='http://localhost:8095/sensor/getAlert'//Change dataset endpoint url
-                                                 themeColor={["red"/*text color*/, "rgba(255,165,0,0.2)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
+                                <LatestAlertInfo apiEndPoint='http://localhost:8095/sensor/getAlert'//Change dataset endpoint url
+                                                 date="date"                                        //Change date variable key name
+                                                 reading="value"                                    //Change sensor reading variable key name
+                                                 location="sensorId"                                //Change location key name
+                                                 threshold="thresholdValue"                         //Change threshold key name
+                                                 sensorId="sensorId"                                //Change sensorId key name
+                                                 otherProperties={[
+                                                     {"id":"1", "sensor": "Temperature", "unit": "F", "color" : ["rgb(255,0,0)", "rgba(255,165,0,0.2)", "rgba(255,0,0,0.02)"], "icon":"bi bi-thermometer-half"},
+                                                     {"id":"2", "sensor": "Pressure", "unit": "Pa", "color" : ["rgb(7,94,84)", "rgba(37, 211, 102,0.2)", "rgba(7,94,84,0.02)"], "icon":"bi bi-arrows-collapse"},
+                                                     {"id":"3", "sensor": "Humidity", "unit": "(kg/kg)", "color" : ["rgb(75, 37, 109)", "rgba(104,143,173,0.2)", "rgba(75, 37, 109,0.02)"], "icon":"bi bi-droplet-half"}]}
                                 />
                             </div>
                         </div>
                         <br/>
+
                         <div id="graphs" className={"card"}>
                             <div className={"card-header"}>
                                 Sensor Reading Graphs
@@ -138,32 +140,49 @@ export default class DashBoard extends Component {
                                     y="value"                                   //Change chart y variable key name
                                     location="sensorId"                         //Change chart location key name
                                     time="time"                                 //Change chart location key name
+                                    threshold={30}                              //Change alert threshold key name
                                     yAxisLabel="Temperature"                    //Change chart y axis label
                                     yUnit="F"                                   //Change y variable unit
                                     xAxisLabel="Date"                           //Change chart x axis label
-                                    threshold={30}                              //Change alert threshold
                                     apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
-                                    themeColor={["red", "orange"]}              //Change chart theme color x2
+                                    themeColor={["rgb(255,0,0)", "rgb(255,165,0)"]}              //Change chart theme color x2
                                 /> : null}
 
                                 { this.state.show_pres_graph ?
                                     <SensorReadingChart
-                                        icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                        chartTitle="Temperature Readings"           //Change chart title
+                                        icon="bi bi-arrows-collapse"                //Change chart bootstrap icon
+                                        chartTitle="Pressure measurement"           //Change chart title
                                         x="date"                                    //Change chart x variable key name
                                         y="value"                                   //Change chart y variable key name
                                         location="sensorId"                         //Change chart location key name
                                         time="time"                                 //Change chart location key name
-                                        yAxisLabel="Temperature"                    //Change chart y axis label
-                                        yUnit="F"                                   //Change y variable unit
+                                        yAxisLabel="Pressure"                       //Change chart y axis label
+                                        yUnit="Pa"                                  //Change y variable unit
                                         xAxisLabel="Date"                           //Change chart x axis label
-                                        threshold={30}                              //Change alert threshold
+                                        threshold={85}                              //Change alert threshold
                                         apiEndPoint='http://localhost:8095/sensor/getById?sensorId=2'//Change dataset endpoint url
-                                        themeColor={["blue", "green"]}              //Change chart theme color x2
+                                        themeColor={["rgb(7,94,84)", "rgb(37, 211, 102)"]}           //Change chart theme color x2
+                                    /> : null}
+
+                                { this.state.show_hum_graph ?
+                                    <SensorReadingChart
+                                        icon="bi bi-droplet-half"                   //Change chart bootstrap icon
+                                        chartTitle="Humidity Readings"              //Change chart title
+                                        x="date"                                    //Change chart x variable key name
+                                        y="value"                                   //Change chart y variable key name
+                                        location="sensorId"                         //Change chart location key name
+                                        time="time"                                 //Change chart location key name
+                                        yAxisLabel="Humidity"                       //Change chart y axis label
+                                        yUnit="(kg/kg)"                             //Change y variable unit
+                                        xAxisLabel="Date"                           //Change chart x axis label
+                                        threshold={1}                               //Change alert threshold
+                                        apiEndPoint='http://localhost:8095/sensor/getById?sensorId=3'//Change dataset endpoint url
+                                        themeColor={["rgb(75, 37, 109)", "rgb(104,143,173)"]}        //Change chart theme color x2
                                     /> : null}
                             </div>
                         </div>
                         <br/>
+
                         <div id="history" className={"card"}>
                             <div className={"card-header"}>
                                 Sensor Alert History
@@ -175,17 +194,17 @@ export default class DashBoard extends Component {
                             </div>
                             <div className={"p-3 m-2"}>
                                 { this.state.show_temp_table ?
-                                <AlertHistoryTable icon="bi bi-thermometer-half"               //Change chart bootstrap icon
-                                                   tableTitle="Temperature Alert History"      //Change chart title
-                                                   x="date"                                    //Change chart x variable key name
-                                                   y="value"                                   //Change chart y variable key name
-                                                   location="sensorId"                         //Change chart location key name
-                                                   time="time"                                 //Change chart location key name
-                                                   yAxisLabel="Temperature"                    //Change chart y axis label
-                                                   yUnit="F"                                   //Change y variable unit
-                                                   xAxisLabel="Date"                           //Change chart x axis label
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
+                                                   icon="bi bi-thermometer-half"               //Change table bootstrap icon
+                                                   tableTitle="Temperature Alert History"      //Change table title
+                                                   date="date"                                 //Change date variable key name
+                                                   reading="value"                             //Change reading variable key name
+                                                   location="sensorId"                         //Change location key name
+                                                   time="time"                                 //Change time key name
+                                                   sensorName="Temperature"                    //Change sensor name
+                                                   unit="F"                                    //Change reading unit
                                                    threshold={30}                              //Change alert threshold
-                                                   apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
+
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
                             </div>
@@ -197,7 +216,7 @@ export default class DashBoard extends Component {
 
                 <div className={'row bg-light text-dark p-4 '} id="about">
                     <div className="container-fluid">
-                        <div className={'row text-muted'}><i className="bi bi-person-lines-fill"></i>&nbsp; About us</div>
+                        <div className={'row text-muted'}><i className="bi bi-person-lines-fill"/>&nbsp; About us</div>
                         <div className={'row text-muted'}><small>We are Team D</small></div>
                         <div align={"center"}>
                             <Aboutus name={"Dineth Shan Gimhana"} id={"SE/2017/013"} profile={deneth}/>
