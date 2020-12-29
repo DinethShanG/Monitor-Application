@@ -10,8 +10,8 @@ public class TwilioSmsSender implements SmsSender {
     @Override
     public void sendSms(String mobile, String sms) {
         success = false;
-        Twilio.init(System.getenv("ACCOUNT_SID"), System.getenv("AUTH_TOKEN"));
         try{
+            Twilio.init(System.getenv("ACCOUNT_SID"), System.getenv("AUTH_TOKEN"));
             Message message = Message
                     .creator(new PhoneNumber(mobile), // to
                             new PhoneNumber("+17543991081"), // from

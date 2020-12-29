@@ -52,17 +52,11 @@ public class SensorController {
 
 
     @PostMapping("/setValue")
-    public String insert( String sensorId,String date,String time,String dataValue){
+    public String insert( String sensorId,String date,String dataValue,boolean exceeded) throws IOException, URISyntaxException {
 
         if(sensorId.equals("1") || sensorId.equals("2") || sensorId.equals("3")){
             alertType = new AlertTriggerFactory().getAlertType(sensorId);
-            Sensor sensor = null;
-            try {
-                sensor = new Sensor(sensorId,date,time,dataValue,alertType.getThreshold(),alertType.isExceeded(Double.parseDouble(dataValue)));
-            } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
-            }
-            this.sensorRepository.insert(sensor);
+            alertType.isExceeded(exceeded,Double.parseDouble(dataValue));
             return "Sensor data send Successfully";
         }
         else{

@@ -18,8 +18,8 @@ public abstract class Alert implements AlertType {
     }
 
     @Override
-    public boolean isExceeded(double dataValue) throws IOException, URISyntaxException {
-        if(thresholdValue < dataValue){
+    public boolean isExceeded(boolean exceeded,double dataValue) throws IOException, URISyntaxException {
+        if(exceeded){
             userList = new RecipientRetriever().getAllUsers();
             for (User user: userList) {
                 message = createMessage(dataValue,thresholdValue,user);
