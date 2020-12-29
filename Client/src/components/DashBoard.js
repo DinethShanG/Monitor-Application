@@ -223,7 +223,7 @@ export default class DashBoard extends Component {
                                 /> : null}
                                 { this.state.show_hum_table ?
                                 <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=3'//Change dataset endpoint url
-                                                   icon="bi bi-arrows-collapse"                //Change table bootstrap icon
+                                                   icon="bi bi-droplet-half"                //Change table bootstrap icon
                                                    tableTitle="Humidity Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
                                                    reading="value"                             //Change reading variable key name
