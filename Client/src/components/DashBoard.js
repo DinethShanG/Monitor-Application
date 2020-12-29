@@ -207,6 +207,34 @@ export default class DashBoard extends Component {
 
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
+                                { this.state.show_pres_table ?
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=2'//Change dataset endpoint url
+                                                   icon="bi bi-arrows-collapse"                //Change table bootstrap icon
+                                                   tableTitle="Pressure Alert History"         //Change table title
+                                                   date="date"                                 //Change date variable key name
+                                                   reading="value"                             //Change reading variable key name
+                                                   location="sensorId"                         //Change location key name
+                                                   time="time"                                 //Change time key name
+                                                   sensorName="Pressure"                       //Change sensor name
+                                                   unit="Pa"                                   //Change reading unit
+                                                   threshold={85}                              //Change alert threshold
+
+                                                   themeColor={["rgb(7,94,84)"/*text color*/, "rgba(37, 211, 102,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
+                                /> : null}
+                                { this.state.show_hum_table ?
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=3'//Change dataset endpoint url
+                                                   icon="bi bi-arrows-collapse"                //Change table bootstrap icon
+                                                   tableTitle="Humidity Alert History"         //Change table title
+                                                   date="date"                                 //Change date variable key name
+                                                   reading="value"                             //Change reading variable key name
+                                                   location="sensorId"                         //Change location key name
+                                                   time="time"                                 //Change time key name
+                                                   sensorName="Humidity"                       //Change sensor name
+                                                   unit="(kg/kg)"                              //Change reading unit
+                                                   threshold={1}                               //Change alert threshold
+
+                                                   themeColor={["rgb(75, 37, 109)"/*text color*/, "rgba(104,143,173,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
+                                /> : null}
                             </div>
                         </div>
                         <br/>
