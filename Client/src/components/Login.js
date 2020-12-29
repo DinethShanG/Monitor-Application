@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import back from "../animat-day-night-color.gif"
 
 import AuthService from "../services/auth.service";
 
@@ -81,6 +82,11 @@ export default class Login extends Component {
 
   render() {
     return (
+        <div>
+          <div className="col-md-12 mt-3 " align={"center"}>
+            <img src={back} width={"200px"}/>
+            <div className={"h2"} style={{color : "#00344d" ,top: "-10px"}}><b>Weather</b>.<i>application</i></div>
+          </div>
       <div className="col-md-12 mt-3" align={"center"}>
         <div className="card card-container d-inline-block bg-light border-light" align={"left"}>
           <img
@@ -121,7 +127,7 @@ export default class Login extends Component {
 
             <div className="form-group">
               <button
-                className="btn btn-primary btn-block"
+                className="btn btn-secondary btn-block"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
@@ -147,6 +153,7 @@ export default class Login extends Component {
           </Form>
         </div>
       </div>
+    </div>
     );
   }
 }

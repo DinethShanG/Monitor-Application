@@ -33,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/member_images" />
       <recent name="$PROJECT_DIR$/src/components/member_images" />
     </key>
@@ -94,6 +95,7 @@
       <workItem from="1609062425677" duration="1407000" />
       <workItem from="1609158082340" duration="7403000" />
       <workItem from="1609172322941" duration="12814000" />
+      <workItem from="1609213505428" duration="5172000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1608373672825</created>
