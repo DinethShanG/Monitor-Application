@@ -23,30 +23,11 @@ public class SensorController {
 
     private SensorRepository sensorRepository;
     private AlertType alertType;
+
     public SensorController(SensorRepository sensorRepository) {
         this.sensorRepository = sensorRepository;
     }
 
-
-    @GetMapping("/getAlert")
-    public List<Sensor> getAlert(){
-        String date;
-
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime today = LocalDateTime.now();
-        date=dtf.format(today);
-        List<Sensor> readings =this.sensorRepository.findByDateAndExceeded(date, "true");
-        return readings;
-    }
-
-
-
-    @GetMapping("/getById")
-    public List<Sensor> getById(int sensorId){
-
-        List<Sensor> readings =this.sensorRepository.findBySensorId(sensorId);
-        return readings;
-    }
 
 
     @PostMapping("/setAlert")
@@ -54,7 +35,6 @@ public class SensorController {
 
         if(sensorId.equals("1") || sensorId.equals("2") || sensorId.equals("3")){
             alertType = new AlertTriggerFactory().getAlertType(sensorId);
-            System.out.println(threshold);
             alertType.triggerAlert(dataValue,threshold);
             return "Sensor data send Successfully";
         }
@@ -63,12 +43,35 @@ public class SensorController {
         }
     }
 
-    @GetMapping("/getAll")
-    public List<Sensor> getAll(){
-        List<Sensor> readings =this.sensorRepository.findAll();
-        return readings;
 
+
+    @GetMapping("/getAlert")
+    public List<Sensor> getAlert(){
+        String date;
+        String exceeded="true";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime today = LocalDateTime.now();
+        date=dtf.format(today);
+        List<Sensor> readings =this.sensorRepository.findByDateAndExceeded(date,exceeded);
+        return readings;
+    }
+
+    @GetMapping("/getAlerSensorId")
+    public List<Sensor> getAlerSensorId(String sensorId){
+        String date;
+        String exceeded="true";
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime today = LocalDateTime.now();
+        date=dtf.format(today);
+        List<Sensor> readings =this.sensorRepository.findByDateAndExceededAndSensorId(date,exceeded,sensorId);
+        return readings;
     }
 
 
+
+    @GetMapping("/getById")
+    public List<Sensor> getById(String sensorId){
+        List<Sensor> readings =this.sensorRepository.findBySensorId(sensorId);
+        return readings;
+    }
 }

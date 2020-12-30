@@ -109,8 +109,8 @@ export default class DashBoard extends Component {
                             <div className={"p-3 m-2"} align={"center"}>
                                 <LatestAlertInfo apiEndPoint='http://localhost:8095/sensor/getAlert'//Change dataset endpoint url
                                                  date="date"                                        //Change date variable key name
-                                                 reading="value"                                    //Change sensor reading variable key name
-                                                 location="sensorId"                                //Change location key name
+                                                 reading="dataValue"                                    //Change sensor reading variable key name
+                                                 location="location"                                //Change location key name
                                                  threshold="threshold"                         //Change threshold key name
                                                  sensorId="sensorId"                                //Change sensorId key name
                                                  otherProperties={[
@@ -138,7 +138,7 @@ export default class DashBoard extends Component {
                                     chartTitle="Temperature Readings"           //Change chart title
                                     x="date"                                    //Change chart x variable key name
                                     y="dataValue"                                   //Change chart y variable key name
-                                    location="sensorId"                         //Change chart location key name
+                                    location="location"                         //Change chart location key name
                                     time="time"                                 //Change chart location key name
                                     threshold={30}                              //Change alert threshold key name
                                     yAxisLabel="Temperature"                    //Change chart y axis label
@@ -153,8 +153,8 @@ export default class DashBoard extends Component {
                                         icon="bi bi-arrows-collapse"                //Change chart bootstrap icon
                                         chartTitle="Pressure measurement"           //Change chart title
                                         x="date"                                    //Change chart x variable key name
-                                        y="value"                                   //Change chart y variable key name
-                                        location="sensorId"                         //Change chart location key name
+                                        y="dataValue"                                   //Change chart y variable key name
+                                        location="location"                         //Change chart location key name
                                         time="time"                                 //Change chart location key name
                                         yAxisLabel="Pressure"                       //Change chart y axis label
                                         yUnit="Pa"                                  //Change y variable unit
@@ -170,7 +170,7 @@ export default class DashBoard extends Component {
                                         chartTitle="Humidity Readings"              //Change chart title
                                         x="date"                                    //Change chart x variable key name
                                         y="dataValue"                                   //Change chart y variable key name
-                                        location="sensorId"                         //Change chart location key name
+                                        location="location"                         //Change chart location key name
                                         time="time"                                 //Change chart location key name
                                         yAxisLabel="Humidity"                       //Change chart y axis label
                                         yUnit="(kg/kg)"                             //Change y variable unit
@@ -194,12 +194,12 @@ export default class DashBoard extends Component {
                             </div>
                             <div className={"p-3 m-2"}>
                                 { this.state.show_temp_table ?
-                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=1'//Change dataset endpoint url
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlerSensorId?sensorId=1'//Change dataset endpoint url
                                                    icon="bi bi-thermometer-half"               //Change table bootstrap icon
                                                    tableTitle="Temperature Alert History"      //Change table title
                                                    date="date"                                 //Change date variable key name
                                                    reading="dataValue"                             //Change reading variable key name
-                                                   location="sensorId"                         //Change location key name
+                                                   location="location"                         //Change location key name
                                                    time="time"                                 //Change time key name
                                                    sensorName="Temperature"                    //Change sensor name
                                                    unit="F"                                    //Change reading unit
@@ -208,12 +208,12 @@ export default class DashBoard extends Component {
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
                                 { this.state.show_pres_table ?
-                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=2'//Change dataset endpoint url
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlerSensorId?sensorId=2'//Change dataset endpoint url
                                                    icon="bi bi-arrows-collapse"                //Change table bootstrap icon
                                                    tableTitle="Pressure Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
                                                    reading="dataValue"                             //Change reading variable key name
-                                                   location="sensorId"                         //Change location key name
+                                                   location="location"                         //Change location key name
                                                    time="time"                                 //Change time key name
                                                    sensorName="Pressure"                       //Change sensor name
                                                    unit="Pa"                                   //Change reading unit
@@ -222,12 +222,12 @@ export default class DashBoard extends Component {
                                                    themeColor={["rgb(7,94,84)"/*text color*/, "rgba(37, 211, 102,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
                                 { this.state.show_hum_table ?
-                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getById?sensorId=3'//Change dataset endpoint url
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlerSensorId?sensorId=3'//Change dataset endpoint url
                                                    icon="bi bi-droplet-half"                //Change table bootstrap icon
                                                    tableTitle="Humidity Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
                                                    reading="dataValue"                             //Change reading variable key name
-                                                   location="sensorId"                         //Change location key name
+                                                   location="location"                         //Change location key name
                                                    time="time"                                 //Change time key name
                                                    sensorName="Humidity"                       //Change sensor name
                                                    unit="(kg/kg)"                              //Change reading unit

@@ -8,24 +8,31 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "sensor")
 public class Sensor {
 
-    @Id private String id;
-    private int sensorId;
+    private String id;
+    private String sensorId;
     private String date;
     private String time;
-    private double dataValue;
+    private String dataValue;
+    private String location;
     private String threshold;
     private String exceeded;
 
-    public Sensor(int sensorId, String date, String time, double dataValue,String threshold, String exceeded) {
+
+    public Sensor(String sensorId, String date, String time, String dataValue, String location, String threshold, String exceeded) {
         this.sensorId = sensorId;
         this.date = date;
         this.time = time;
         this.dataValue = dataValue;
+        this.location = location;
         this.threshold = threshold;
         this.exceeded = exceeded;
     }
 
-    public int getSensorId() {
+    public String getId() {
+        return id;
+    }
+
+    public String getSensorId() {
         return sensorId;
     }
 
@@ -37,8 +44,12 @@ public class Sensor {
         return time;
     }
 
-    public double getDataValue() {
+    public String getDataValue() {
         return dataValue;
+    }
+
+    public String getLocation() {
+        return location;
     }
 
     public String getThreshold() {
