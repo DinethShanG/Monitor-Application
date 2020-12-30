@@ -12,7 +12,7 @@ import java.util.List;
 public interface SensorRepository extends MongoRepository<Sensor,String> {
 
      List<Sensor> findByDateAndExceeded(String date,String exceeded);
-     List<Sensor> findByDateAndExceededAndSensorId(String date,String exceeded,String sensorId);
+     List<Sensor> findByExceededAndSensorId(String exceeded,String sensorId);
      List<Sensor> findBySensorId(String sensorId );
 
 }
