@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public interface AlertType {
-    boolean isExceeded(boolean exceeded,double dataValue) throws IOException, URISyntaxException;
-    String createMessage(double dataValue, double thresholdValue, User user);
-    double getThreshold();
+    void triggerAlert(String dataValue,String thresholdValue) throws IOException, URISyntaxException;
+    String createMessage(String dataValue, String thresholdValue, User user);
 }

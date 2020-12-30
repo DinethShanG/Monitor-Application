@@ -111,7 +111,7 @@ export default class DashBoard extends Component {
                                                  date="date"                                        //Change date variable key name
                                                  reading="value"                                    //Change sensor reading variable key name
                                                  location="sensorId"                                //Change location key name
-                                                 threshold="thresholdValue"                         //Change threshold key name
+                                                 threshold="threshold"                         //Change threshold key name
                                                  sensorId="sensorId"                                //Change sensorId key name
                                                  otherProperties={[
                                                      {"id":"1", "sensor": "Temperature", "unit": "F", "color" : ["rgb(255,0,0)", "rgba(255,165,0,0.2)", "rgba(255,0,0,0.02)"], "icon":"bi bi-thermometer-half"},
@@ -137,7 +137,7 @@ export default class DashBoard extends Component {
                                     icon="bi bi-thermometer-half"               //Change chart bootstrap icon
                                     chartTitle="Temperature Readings"           //Change chart title
                                     x="date"                                    //Change chart x variable key name
-                                    y="value"                                   //Change chart y variable key name
+                                    y="dataValue"                                   //Change chart y variable key name
                                     location="sensorId"                         //Change chart location key name
                                     time="time"                                 //Change chart location key name
                                     threshold={30}                              //Change alert threshold key name
@@ -169,7 +169,7 @@ export default class DashBoard extends Component {
                                         icon="bi bi-droplet-half"                   //Change chart bootstrap icon
                                         chartTitle="Humidity Readings"              //Change chart title
                                         x="date"                                    //Change chart x variable key name
-                                        y="value"                                   //Change chart y variable key name
+                                        y="dataValue"                                   //Change chart y variable key name
                                         location="sensorId"                         //Change chart location key name
                                         time="time"                                 //Change chart location key name
                                         yAxisLabel="Humidity"                       //Change chart y axis label
@@ -198,7 +198,7 @@ export default class DashBoard extends Component {
                                                    icon="bi bi-thermometer-half"               //Change table bootstrap icon
                                                    tableTitle="Temperature Alert History"      //Change table title
                                                    date="date"                                 //Change date variable key name
-                                                   reading="value"                             //Change reading variable key name
+                                                   reading="dataValue"                             //Change reading variable key name
                                                    location="sensorId"                         //Change location key name
                                                    time="time"                                 //Change time key name
                                                    sensorName="Temperature"                    //Change sensor name
@@ -212,7 +212,7 @@ export default class DashBoard extends Component {
                                                    icon="bi bi-arrows-collapse"                //Change table bootstrap icon
                                                    tableTitle="Pressure Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
-                                                   reading="value"                             //Change reading variable key name
+                                                   reading="dataValue"                             //Change reading variable key name
                                                    location="sensorId"                         //Change location key name
                                                    time="time"                                 //Change time key name
                                                    sensorName="Pressure"                       //Change sensor name
@@ -226,7 +226,7 @@ export default class DashBoard extends Component {
                                                    icon="bi bi-droplet-half"                //Change table bootstrap icon
                                                    tableTitle="Humidity Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
-                                                   reading="value"                             //Change reading variable key name
+                                                   reading="dataValue"                             //Change reading variable key name
                                                    location="sensorId"                         //Change location key name
                                                    time="time"                                 //Change time key name
                                                    sensorName="Humidity"                       //Change sensor name

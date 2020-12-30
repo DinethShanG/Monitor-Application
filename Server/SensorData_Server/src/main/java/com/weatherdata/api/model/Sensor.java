@@ -9,23 +9,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Sensor {
 
     @Id private String id;
-    private String sensorId;
+    private int sensorId;
     private String date;
     private String time;
-    private String value;
-    private double thresholdValue;
-    private boolean exceeded;
+    private double dataValue;
+    private String threshold;
+    private String exceeded;
 
-    public Sensor(String sensorId, String date, String time, String value, double thresholdValue, boolean exceeded) {
+    public Sensor(int sensorId, String date, String time, double dataValue,String threshold, String exceeded) {
         this.sensorId = sensorId;
         this.date = date;
         this.time = time;
-        this.value = value;
-        this.thresholdValue = thresholdValue;
+        this.dataValue = dataValue;
+        this.threshold = threshold;
         this.exceeded = exceeded;
     }
 
-    public String getSensorId() {
+    public int getSensorId() {
         return sensorId;
     }
 
@@ -37,15 +37,15 @@ public class Sensor {
         return time;
     }
 
-    public String getValue() {
-        return value;
+    public double getDataValue() {
+        return dataValue;
     }
 
-    public double getThresholdValue() {
-        return thresholdValue;
+    public String getThreshold() {
+        return threshold;
     }
 
-    public boolean isExceeded() {
+    public String getExceeded() {
         return exceeded;
     }
 }
