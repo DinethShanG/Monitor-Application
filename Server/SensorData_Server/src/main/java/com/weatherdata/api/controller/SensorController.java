@@ -56,14 +56,11 @@ public class SensorController {
         return readings;
     }
 
-    @GetMapping("/getAlerSensorId")
-    public List<Sensor> getAlerSensorId(String sensorId){
-        String date;
+    @GetMapping("/getAlertSensorId")
+    public List<Sensor> getAlertSensorId(String sensorId){
+
         String exceeded="true";
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime today = LocalDateTime.now();
-        date=dtf.format(today);
-        List<Sensor> readings =this.sensorRepository.findByDateAndExceededAndSensorId(date,exceeded,sensorId);
+        List<Sensor> readings =this.sensorRepository.findByExceededAndSensorId(exceeded,sensorId);
         return readings;
     }
 

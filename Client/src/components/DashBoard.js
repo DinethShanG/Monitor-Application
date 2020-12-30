@@ -194,7 +194,7 @@ export default class DashBoard extends Component {
                             </div>
                             <div className={"p-3 m-2"}>
                                 { this.state.show_temp_table ?
-                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlerSensorId?sensorId=1'//Change dataset endpoint url
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlertSensorId?sensorId=1'//Change dataset endpoint url
                                                    icon="bi bi-thermometer-half"               //Change table bootstrap icon
                                                    tableTitle="Temperature Alert History"      //Change table title
                                                    date="date"                                 //Change date variable key name
@@ -208,7 +208,7 @@ export default class DashBoard extends Component {
                                                    themeColor={["red"/*text color*/, "rgba(255,165,0,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
                                 { this.state.show_pres_table ?
-                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlerSensorId?sensorId=2'//Change dataset endpoint url
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlertSensorId?sensorId=2'//Change dataset endpoint url
                                                    icon="bi bi-arrows-collapse"                //Change table bootstrap icon
                                                    tableTitle="Pressure Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
@@ -222,7 +222,7 @@ export default class DashBoard extends Component {
                                                    themeColor={["rgb(7,94,84)"/*text color*/, "rgba(37, 211, 102,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
                                 { this.state.show_hum_table ?
-                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlerSensorId?sensorId=3'//Change dataset endpoint url
+                                <AlertHistoryTable apiEndPoint='http://localhost:8095/sensor/getAlertSensorId?sensorId=3'//Change dataset endpoint url
                                                    icon="bi bi-droplet-half"                //Change table bootstrap icon
                                                    tableTitle="Humidity Alert History"         //Change table title
                                                    date="date"                                 //Change date variable key name
