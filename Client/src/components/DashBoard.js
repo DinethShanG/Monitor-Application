@@ -159,7 +159,7 @@ export default class DashBoard extends Component {
                                         yAxisLabel="Pressure"                       //Change chart y axis label
                                         yUnit="Pa"                                  //Change y variable unit
                                         xAxisLabel="Date"                           //Change chart x axis label
-                                        threshold={85}                              //Change alert threshold
+                                        threshold={1}                              //Change alert threshold
                                         apiEndPoint='http://localhost:8095/sensor/getById?sensorId=3'//Change dataset endpoint url
                                         themeColor={["rgb(7,94,84)", "rgb(37, 211, 102)"]}           //Change chart theme color x2
                                     /> : null}
@@ -175,7 +175,7 @@ export default class DashBoard extends Component {
                                         yAxisLabel="Humidity"                       //Change chart y axis label
                                         yUnit="(kg/kg)"                             //Change y variable unit
                                         xAxisLabel="Date"                           //Change chart x axis label
-                                        threshold={1}                               //Change alert threshold
+                                        threshold={85}                               //Change alert threshold
                                         apiEndPoint='http://localhost:8095/sensor/getById?sensorId=2'//Change dataset endpoint url
                                         themeColor={["rgb(75, 37, 109)", "rgb(104,143,173)"]}        //Change chart theme color x2
                                     /> : null}
@@ -217,7 +217,7 @@ export default class DashBoard extends Component {
                                                    time="time"                                 //Change time key name
                                                    sensorName="Pressure"                       //Change sensor name
                                                    unit="Pa"                                   //Change reading unit
-                                                   threshold={85}                              //Change alert threshold
+                                                   threshold={1}                              //Change alert threshold
 
                                                    themeColor={["rgb(7,94,84)"/*text color*/, "rgba(37, 211, 102,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
@@ -231,7 +231,7 @@ export default class DashBoard extends Component {
                                                    time="time"                                 //Change time key name
                                                    sensorName="Humidity"                       //Change sensor name
                                                    unit="(kg/kg)"                              //Change reading unit
-                                                   threshold={1}                               //Change alert threshold
+                                                   threshold={85}                               //Change alert threshold
 
                                                    themeColor={["rgb(75, 37, 109)"/*text color*/, "rgba(104,143,173,0.3)"/*table head bg color*/, "rgba(255,0,0,0.02)"/*table body bg color*/]}
                                 /> : null}
